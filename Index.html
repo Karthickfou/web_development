@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>E-commerce Website</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <script src="script.js"></script>
+</head>
+<style>
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+nav {
+  background-color: #333;
+  color: white;
+  height: 50px;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  height: 100%;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  text-decoration: none;
+  color: white;
+}
+
+.nav-links {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.nav-links li {
+  margin-left: 20px;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+}
+
+.search-container {
+  display: flex;
+}
+
+.search-container input[type="text"] {
+  padding: 5px;
+  border: none;
+  border-radius: 5px 0 0 5px;
+}
+
+.search-container button {
+  padding: 5px 10px;
+  border: none;
+  border-radius: 0 5px 5px 0;
+  background-color: #ff5e14;
+  color: white;
+  cursor: pointer;
+}
+
+.content {
+  padding: 20px;
+}
+
+ /* Styling for the banner container */
+    .banner-container {
+      width: 100%;
+      height: 300px;
+      background-image: url('banner-image.jpg');
+      background-size: cover;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+    }
+
+    /* Styling for the banner content */
+    .banner-content {
+      width: 60%;
+      color: #000000;
+    }
+
+    /* Styling for the headline */
+    .banner-content h1 {
+      font-size: 40px;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+
+    /* Styling for the description */
+    .banner-content p {
+      font-size: 18px;
+      line-height: 1.5;
+      margin-bottom: 30px;
+    }
+
+    /* Styling for the CTA button */
+    .banner-content button {
+      background-color: #ff5e14;
+      color: #fff;
+      padding: 15px 40px;
+      border: none;
+      border-radius: 5px;
+      font-size: 20px;
+      cursor: pointer;
+    }
+    
+
+#bannerContainer {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   margin-top: 20px;
+}
+
+.banner {
+   position: relative;
+   width: 400px;
+   height: 200px;
+   margin: 0 10px;
+}
+
+.banner img {
+   width: 100%;
+   height: 100%;
+   object-fit: cover;
+}
+
+.bannerInfo {
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   text-align: center;
+   color: #000000;
+}
+
+.bannerInfo h2 {
+   font-size: 24px;
+   margin-bottom: 10px;
+}
+
+.bannerInfo p {
+   font-size: 16px;
+}
+
+.bannerButton {
+   display: inline-block;
+   padding: 10px 20px;
+   margin-top: 20px;
+   background-color:#ff5e14 ;
+   color: #fff;
+   text-decoration: none;
+   border-radius: 4px;
+}
+
+.bannerButton:hover {
+   background-color: #ff5e14;
+}
+
+.featured-product {
+  text-align: center;
+}
+
+.product {
+  border: 1px solid #ccc;
+  padding: 20px;
+  margin: 10px;
+  display: inline-block;
+}
+
+img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+}
+
+h2 {
+  font-size: 24px;
+}
+
+h3 {
+  font-size: 18px;
+  margin-top: 10px;
+}
+
+p {
+  margin-top: 10px;
+}
+
+button {
+  background-color: #ff5e14;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+.banner {
+    background-image: url('banner-image.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.content {
+    text-align: center;
+    color: #000000;
+}
+
+h2 {
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.btn {
+    padding: 10px 20px;
+    background-color: #ff5e14;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.2s;
+}
+
+.btn:hover {
+    background-color: #ff5e14;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+footer {
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer-column {
+  flex: 1;
+  margin-right: 20px;
+}
+
+.footer-column h4 {
+  margin-bottom: 10px;
+}
+
+.footer-column ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.footer-column ul li {
+  margin-bottom: 5px;
+}
+
+.footer-column ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.footer-bottom {
+  background-color: rgba(0, 0, 0, 0.2);
+  text-align: center;
+  padding: 10px 0;
+}
+
+</style>
+
+<body>
+  <nav>
+    <div class="navbar">
+      <a href="#" class="logo">E-commerce</a>
+      <ul class="nav-links">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Products</a></li>
+        <li><a href="#">Cart</a></li>
+        <li><a href="#">My Account</a></li>
+      </ul>
+      <div class="search-container">
+        <input type="text" id="search-bar" placeholder="Search...">
+        <button type="submit" onclick="search()">Search</button>
+      </div>
+    </div>
+  </nav>
+
+  <div class="content">
+    <!-- Add your website content here -->
+  </div> 
+  
+<!-- Banner Container -->
+  <div class="banner-container">
+    <!-- Content in the banner -->
+    <div class="banner-content">
+      <!-- Headline -->
+      <h1>Shop Now and Get Exciting Discounts!</h1>
+      <!-- Description -->
+      <p>Discover the latest trends and shop from a wide range of products from the comfort of your home.</p>
+      <!-- CTA Button -->
+      <button onclick="location.href='http://www.example.com'">Shop Now</button>
+    </div>
+  </div>
+  
+  
+ <div id="bannerContainer">
+   <div class="banner">
+      <img src="112.jpg" alt="Banner 1">
+      <div class="bannerInfo"><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+         <a href="#" class="bannerButton">Shop now</a>
+      </div>
+   </div>
+   <div class="banner">
+      <img src="111.jpg" alt="Banner 2">
+      <div class="bannerInfo"><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+         <a href="#" class="bannerButton">Shop now</a>
+      </div>
+   </div>
+</div>
+
+<br><br><br><br><br><br>
+<div class="featured-product">
+    <div class="product">
+      <img src="113.jpeg" alt="Product Image">
+      <h3>Royalex</h3>
+      <p>Royalex RPM 3.0 Analog Watch - For Men</p>
+      <button>Add to Cart</button>
+    </div>
+  </div>
+   
+<div class="featured-product">
+    <div class="product">
+      <img src="114.jpeg" alt="Product Image">
+      <h3>Puma</h3>
+      <p>RS-Z Reinvention Sneakers For Men</p>
+      <button>Add to Cart</button>
+    </div>
+  </div>
+
+  <div class="featured-product">
+    <div class="product">
+      <img src="115.jpeg" alt="Product Image">
+      <h3>Boat Airdopes</h3>
+      <p>boAt Airdopes 131 Iron Man Edition </p>
+      <button>Add to Cart</button>
+    </div>
+  </div>
+         
+<center>
+<div class="banner">
+    <div class="content">
+        <h2>Get 20% off on all products!</h2>
+        <p>Shop now and avail the exciting discount.</p>
+        <a href="#" class="btn">Shop Now</a>
+    </div>
+</div>
+</center>
+
+ <footer>
+    <div class="footer-container">
+      <div class="footer-column">
+        <h4>About Us</h4>
+        <ul>
+          <li><a href="#">Contact Us</a></li>
+          <li><a href="#">About <E-commerce></E-commerce></a></li>
+          <li><a href="#">Careers</a></li>
+          <li><a href="#">News</a></li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h4>Help</h4>
+        <ul>
+          <li><a href="#">Payments</a></li>
+          <li><a href="#">Shipping</a></li>
+          <li><a href="#">Cancellation & Returns</a></li>
+          <li><a href="#">FAQ</a></li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h4>Policy</h4>
+        <ul>
+          <li><a href="#">Return Policy</a></li>
+          <li><a href="#">Terms of Use</a></li>
+          <li><a href="#">Security</a></li>
+          <li><a href="#">Privacy</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2023 E-commerce. All rights reserved.</p>
+    </div>
+  </footer>
+</body>
+</html>
+
